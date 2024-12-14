@@ -51,7 +51,7 @@ function fetchNews() {
         // Adiciona o city-card ao container
         citiesContainer.appendChild(cityCard);
       });
-    }, 1000); // Simula um atraso de 1 segundo para carregar os dados
+    }, 150); // Simula um atraso de 1 segundo para carregar os dados
   }
   
   // Chama a função para simular a atualização dos textos e criação das city-cards ao carregar a página
