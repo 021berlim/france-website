@@ -16,16 +16,5 @@ window.addEventListener("scroll", () => {
   });
   
 
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
-    const target = this.hash;
-    const $target = $(target);
-
-    $('html, body').animate({
-        scrollTop: $target.offset().top
-    }, 800, 'swing', function() {
-        // Remove o hash da URL após a navegação suave
-        history.pushState("", document.title, window.location.pathname + window.location.search);
-    });
-});
+  
  
