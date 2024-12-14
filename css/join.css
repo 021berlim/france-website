@@ -1,0 +1,88 @@
+/* Join Section Styles */
+.join {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.join h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 3rem;
+    margin-left: 0; /* Garante que não tenha margem extra à esquerda */
+}
+
+.join-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start; /* Certifica-se de que os itens começam alinhados */
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-primary); /* Borda personalizada */
+}
+
+.step-number {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.video-container {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+}
+
+.join-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    margin-top: 0rem; /* Aumenta a distância entre os steps e os botões */
+}
+
+.join-buttons button {
+    width: 400px; /* Ajuste a largura do botão */
+}
+
+@media (max-width: 768px) {
+    .join-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .join-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      margin-top: 2rem;
+    }
+  
+    .join-buttons button {
+      width: 100%;
+    }
+  }

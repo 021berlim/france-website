@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>France</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/cities.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/join.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="script/blur.js"></script>
+    <script src="script/api-noticias.js"></script>
+    <link rel="icon" href="media/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img
+              src="../media/images/logo.png"
+              alt="France Logo"
+              width="32"
+              height="32"
+            />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="#noticias">Notícias</a>
+          <a href="#vips">Vip</a>
+          <a href="#comojogar">Como Jogar</a>
+        </div>
+        <!-- <button class="btn-primary">ENTRAR</button> -->
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section" id="home">
+        <div class="full-viewport-section"></div>
+        <div class="overlay">
+          <img
+            src="../media/images/logo.png"
+            alt="Logo France"
+            class="hero-logo"
+          />
+          <h2 class="hero-text">Sua nova vida começa aqui.</h2>
+          <a href="fivem://connect/game.francegg.com">
+            <button class="btn-primary hero-btn">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 256 256"
+                height="22"
+                width="22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M176,116H152a12,12,0,0,1,0-24h24a12,12,0,0,1,0,24ZM104,92h-4V88a12,12,0,0,0-24,0v4H72a12,12,0,0,0,0,24h4v4a12,12,0,0,0,24,0v-4h4a12,12,0,0,0,0-24ZM244.76,202.94a40,40,0,0,1-61,5.35,7,7,0,0,1-.53-.56L144.67,164H111.33L72.81,207.73c-.17.19-.35.38-.53.56A40,40,0,0,1,4.62,173.05a1.18,1.18,0,0,1,0-.2L21,88.79A63.88,63.88,0,0,1,83.88,36H172a64.08,64.08,0,0,1,62.93,52.48,1.8,1.8,0,0,1,0,.19l16.36,84.17a1.77,1.77,0,0,1,0,.2A39.74,39.74,0,0,1,244.76,202.94ZM172,140a40,40,0,0,0,0-80H83.89A39.9,39.9,0,0,0,44.62,93.06a1.55,1.55,0,0,0,0,.21l-16.34,84a16,16,0,0,0,13,18.44,16.07,16.07,0,0,0,13.86-4.21L96.9,144.07a12,12,0,0,1,9-4.07Zm55.76,37.31-7-35.95a63.84,63.84,0,0,1-44.27,22.46l24.41,27.72a16,16,0,0,0,26.85-14.23Z"
+                ></path>
+              </svg>
+              Jogar Agora
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </button>
+          </a>
+
+          <div class="social-buttons">
+            <a
+              href="https://discord.com/invite/cDFKm5TrDD"
+              target="_blank"
+              class="social-btn"
+              aria-label="Discord"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.3034 5.33716C17.9344 4.71103 16.4805 4.2547 14.9629 4C14.7719 4.32899 14.5596 4.77471 14.411 5.12492C12.7969 4.89144 11.1944 4.89144 9.60255 5.12492C9.45397 4.77471 9.2311 4.32899 9.05068 4C7.52251 4.2547 6.06861 4.71103 4.70915 5.33716C1.96053 9.39111 1.21766 13.3495 1.5891 17.2549C3.41443 18.5815 5.17612 19.388 6.90701 19.9187C7.33151 19.3456 7.71356 18.73 8.04255 18.0827C7.41641 17.8492 6.82211 17.5627 6.24904 17.2231C6.39762 17.117 6.5462 17.0003 6.68416 16.8835C10.1438 18.4648 13.8911 18.4648 17.3082 16.8835C17.4568 17.0003 17.5948 17.117 17.7434 17.2231C17.1703 17.5627 16.576 17.8492 15.9499 18.0827C16.2789 18.73 16.6609 19.3456 17.0854 19.9187C18.8152 19.388 20.5875 18.5815 22.4033 17.2549C22.8596 12.7341 21.6806 8.80747 19.3034 5.33716ZM8.5201 14.8459C7.48007 14.8459 6.63107 13.9014 6.63107 12.7447C6.63107 11.5879 7.45884 10.6434 8.5201 10.6434C9.57071 10.6434 10.4303 11.5879 10.4091 12.7447C10.4091 13.9014 9.57071 14.8459 8.5201 14.8459ZM15.4936 14.8459C14.4535 14.8459 13.6034 13.9014 13.6034 12.7447C13.6034 11.5879 14.4323 10.6434 15.4936 10.6434C16.5442 10.6434 17.4038 11.5879 17.3825 12.7447C17.3825 13.9014 16.5548 14.8459 15.4936 14.8459Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/cidadefrancerp/"
+              target="_blank"
+              class="social-btn"
+              aria-label="Instagram"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@cidadefrancegg"
+              target="_blank"
+              class="social-btn"
+              aria-label="TikTok"
+            >
+              <svg
+                fill="currentColor"
+                width="24px"
+                height="24px"
+                viewBox="0 0 512 512"
+                id="icons"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/cidadefrance"
+              target="_blank"
+              class="social-btn"
+              aria-label="Twitter"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1308L10.9168 14.933L4.95084 21.75H1.64084L9.37084 12.915L1.21484 2.25H8.04084L12.7538 8.481L18.2048 2.25ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    
+    <main class="main2">
+      <div class="division"></div>
+      <div class="hero" id="noticias">
+        <h1><span>#</span>NOTÍCIAS</h1>
+        <p>Confira o que está acontecendo no Franceverso</p>
+      </div>
+
+      <section class="cities" id="cities-container"></section>
+
+      <div class="division"></div>
+      <section class="product-section" id="vips">
+        <div class="hero">
+          <h1 class="section-title">CONHEÇA OS <span>PLANOS</span></h1>
+          <p>GARANTA ACESSO A BENEFÍCIOS EXCLUSIVOS DENTRO DO SERVIDOR</p>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="150px" height="150px" viewBox="0 0 1280.000000 1280.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+           fill="#87cefa" stroke="none">
+           <path d="M6156 10394 l-1939 -12 -144 -144 c-224 -222 -816 -829 -1154 -1183
+           -679 -711 -1476 -1576 -1492 -1616 -6 -19 29 -58 275 -297 352 -342 556 -547
+           1896 -1907 1716 -1741 2810 -2825 2851 -2825 12 0 80 65 182 173 493 520 1159
+           1213 2219 2307 1723 1777 2510 2609 2510 2652 0 15 -247 269 -802 827 -442
+           443 -927 937 -1078 1096 -580 612 -839 862 -954 920 -48 24 -56 25 -240 23
+           -105 0 -1064 -7 -2130 -14z m2330 -662 c435 -409 1897 -1935 1873 -1956 -2 -2
+           -524 -7 -1159 -10 l-1155 -7 -74 178 c-252 607 -578 1356 -756 1736 -48 103
+           -86 189 -84 192 2 2 200 8 439 15 239 6 444 12 455 14 11 2 79 4 151 5 l131 1
+           179 -168z m-1970 142 l51 -6 38 -92 c21 -50 164 -374 318 -721 262 -592 457
+           -1043 525 -1215 l30 -75 -32 -7 c-17 -4 -488 -8 -1046 -9 -558 -1 -1033 -2
+           -1055 -3 -22 0 -39 4 -38 9 5 30 726 1737 848 2009 l59 129 125 -7 c69 -3 149
+           -9 177 -12z m-905 -36 c-47 -120 -865 -2085 -870 -2091 -8 -8 -2330 -27 -2341
+           -19 -13 9 33 62 100 113 97 75 211 196 1234 1304 127 138 334 355 460 483
+           l229 232 598 0 599 0 -9 -22z m4789 -2596 c0 -10 -51 -57 -108 -101 -60 -46
+           -817 -831 -1626 -1686 -527 -557 -1217 -1264 -1523 -1562 -145 -140 -263 -253
+           -263 -250 0 8 855 2544 953 2827 112 324 265 751 271 758 3 2 484 8 1068 12
+           585 3 1100 7 1146 8 45 1 82 -2 82 -6z m-2896 -59 c-67 -224 -187 -592 -337
+           -1038 -282 -833 -622 -1854 -680 -2039 l-53 -170 -28 75 c-213 567 -1114 3116
+           -1129 3193 -1 8 219 12 853 16 470 3 975 6 1122 8 l266 2 -14 -47z m-2740
+           -110 c369 -1053 1183 -3354 1215 -3437 l11 -28 -32 27 c-210 175 -1125 1083
+           -1989 1975 -317 327 -797 814 -1068 1082 l-491 487 52 6 c131 15 509 22 1348
+           23 l905 2 49 -137z"/>
+           </g>
+           </svg>
+            <h3 class="card-title">SILVER</h3>
+            <p class="card-description">
+                Acesso a tatuagens exclusivas;<br/>
+                Acesso a cabelos exclusivos;<br/>
+                Acesso a roupas exclusivas;<br/>
+                Slots no Market: 2;<br/>
+                Tempo de expiração no Market: 2 dias;<br/>
+                % Perca de Mochila ao Desmaiar: 25%;<br/>
+                Máximo de aumento de Peso na mochila: 50kg;<br/>
+                Peso Extra: 9kg;<br/>
+                Prioridade na Fila: 30;
+            </p>
+          </div>
+          <div class="card">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="150px" height="150px" viewBox="0 0 1280.000000 1280.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+           fill="#87cefa" stroke="none">
+           <path d="M6156 10394 l-1939 -12 -144 -144 c-224 -222 -816 -829 -1154 -1183
+           -679 -711 -1476 -1576 -1492 -1616 -6 -19 29 -58 275 -297 352 -342 556 -547
+           1896 -1907 1716 -1741 2810 -2825 2851 -2825 12 0 80 65 182 173 493 520 1159
+           1213 2219 2307 1723 1777 2510 2609 2510 2652 0 15 -247 269 -802 827 -442
+           443 -927 937 -1078 1096 -580 612 -839 862 -954 920 -48 24 -56 25 -240 23
+           -105 0 -1064 -7 -2130 -14z m2330 -662 c435 -409 1897 -1935 1873 -1956 -2 -2
+           -524 -7 -1159 -10 l-1155 -7 -74 178 c-252 607 -578 1356 -756 1736 -48 103
+           -86 189 -84 192 2 2 200 8 439 15 239 6 444 12 455 14 11 2 79 4 151 5 l131 1
+           179 -168z m-1970 142 l51 -6 38 -92 c21 -50 164 -374 318 -721 262 -592 457
+           -1043 525 -1215 l30 -75 -32 -7 c-17 -4 -488 -8 -1046 -9 -558 -1 -1033 -2
+           -1055 -3 -22 0 -39 4 -38 9 5 30 726 1737 848 2009 l59 129 125 -7 c69 -3 149
+           -9 177 -12z m-905 -36 c-47 -120 -865 -2085 -870 -2091 -8 -8 -2330 -27 -2341
+           -19 -13 9 33 62 100 113 97 75 211 196 1234 1304 127 138 334 355 460 483
+           l229 232 598 0 599 0 -9 -22z m4789 -2596 c0 -10 -51 -57 -108 -101 -60 -46
+           -817 -831 -1626 -1686 -527 -557 -1217 -1264 -1523 -1562 -145 -140 -263 -253
+           -263 -250 0 8 855 2544 953 2827 112 324 265 751 271 758 3 2 484 8 1068 12
+           585 3 1100 7 1146 8 45 1 82 -2 82 -6z m-2896 -59 c-67 -224 -187 -592 -337
+           -1038 -282 -833 -622 -1854 -680 -2039 l-53 -170 -28 75 c-213 567 -1114 3116
+           -1129 3193 -1 8 219 12 853 16 470 3 975 6 1122 8 l266 2 -14 -47z m-2740
+           -110 c369 -1053 1183 -3354 1215 -3437 l11 -28 -32 27 c-210 175 -1125 1083
+           -1989 1975 -317 327 -797 814 -1068 1082 l-491 487 52 6 c131 15 509 22 1348
+           23 l905 2 49 -137z"/>
+           </g>
+           </svg>
+            <h3 class="card-title">GOLD</h3>
+            <p class="card-description">
+                Acesso a tatuagens exclusivas;<br/>
+                Acesso a cabelos exclusivos;<br/>
+                Acesso a roupas exclusivas;<br/>
+                Slots no Market: 2;<br/>
+                Tempo de expiração no Market: 2 dias;<br/>
+                % Perca de Mochila ao Desmaiar: 25%;<br/>
+                Máximo de aumento de Peso na mochila: 50kg;<br/>
+                Peso Extra: 9kg;<br/>
+                Prioridade na Fila: 30;
+            </p>
+          </div>
+          <div class="card">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="150px" height="150px" viewBox="0 0 1280.000000 1280.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+           fill="#87cefa" stroke="none">
+           <path d="M6156 10394 l-1939 -12 -144 -144 c-224 -222 -816 -829 -1154 -1183
+           -679 -711 -1476 -1576 -1492 -1616 -6 -19 29 -58 275 -297 352 -342 556 -547
+           1896 -1907 1716 -1741 2810 -2825 2851 -2825 12 0 80 65 182 173 493 520 1159
+           1213 2219 2307 1723 1777 2510 2609 2510 2652 0 15 -247 269 -802 827 -442
+           443 -927 937 -1078 1096 -580 612 -839 862 -954 920 -48 24 -56 25 -240 23
+           -105 0 -1064 -7 -2130 -14z m2330 -662 c435 -409 1897 -1935 1873 -1956 -2 -2
+           -524 -7 -1159 -10 l-1155 -7 -74 178 c-252 607 -578 1356 -756 1736 -48 103
+           -86 189 -84 192 2 2 200 8 439 15 239 6 444 12 455 14 11 2 79 4 151 5 l131 1
+           179 -168z m-1970 142 l51 -6 38 -92 c21 -50 164 -374 318 -721 262 -592 457
+           -1043 525 -1215 l30 -75 -32 -7 c-17 -4 -488 -8 -1046 -9 -558 -1 -1033 -2
+           -1055 -3 -22 0 -39 4 -38 9 5 30 726 1737 848 2009 l59 129 125 -7 c69 -3 149
+           -9 177 -12z m-905 -36 c-47 -120 -865 -2085 -870 -2091 -8 -8 -2330 -27 -2341
+           -19 -13 9 33 62 100 113 97 75 211 196 1234 1304 127 138 334 355 460 483
+           l229 232 598 0 599 0 -9 -22z m4789 -2596 c0 -10 -51 -57 -108 -101 -60 -46
+           -817 -831 -1626 -1686 -527 -557 -1217 -1264 -1523 -1562 -145 -140 -263 -253
+           -263 -250 0 8 855 2544 953 2827 112 324 265 751 271 758 3 2 484 8 1068 12
+           585 3 1100 7 1146 8 45 1 82 -2 82 -6z m-2896 -59 c-67 -224 -187 -592 -337
+           -1038 -282 -833 -622 -1854 -680 -2039 l-53 -170 -28 75 c-213 567 -1114 3116
+           -1129 3193 -1 8 219 12 853 16 470 3 975 6 1122 8 l266 2 -14 -47z m-2740
+           -110 c369 -1053 1183 -3354 1215 -3437 l11 -28 -32 27 c-210 175 -1125 1083
+           -1989 1975 -317 327 -797 814 -1068 1082 l-491 487 52 6 c131 15 509 22 1348
+           23 l905 2 49 -137z"/>
+           </g>
+           </svg>
+            <h3 class="card-title">DIAMOND</h3>
+            <p class="card-description">
+                Acesso a tatuagens exclusivas;<br/>
+                Acesso a cabelos exclusivos;<br/>
+                Acesso a roupas exclusivas;<br/>
+                Slots no Market: 2;<br/>
+                Tempo de expiração no Market: 2 dias;<br/>
+                % Perca de Mochila ao Desmaiar: 25%;<br/>
+                Máximo de aumento de Peso na mochila: 50kg;<br/>
+                Peso Extra: 9kg;<br/>
+                Prioridade na Fila: 30;
+            </p>
+          </div>
+        </div>
+        <a href="https://store.francegg.com/" class="btn-primary loja-btn"
+          >Acessar loja</a
+        >
+        <div class="division"></div>
+      </section>
+
+      <section class="join" id="comojogar">
+        <div class="hero" id="noticias">
+          <h1 style="text-align: left;">COMO JOGAR NA <span>FRANCE</span>?</h1>
+          <P style="text-align: left;">Para acessar nosso servidor, é necessário atender a alguns pré-requisitos:</P>
+        </div>
+
+        <div class="join-content">
+          <div class="steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>
+                Possuir a Allowlist da France, para saber como obter a Allowlist
+                (<a
+                  href="https://discord.com/invite/cDFKm5TrDD"
+                  target="_blank"
+                  class="a"
+                  >clique aqui</a
+                >).
+              </p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Ter uma cópia original do jogo GTA V</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Ter o FiveM instalado</p>
+            </div>
+          </div>
+
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/uA9WhqvKVMU?autoplay=1&loop=1&playlist=uA9WhqvKVMU"
+              title="Tutorial France"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="pointer-events: none"
+            ></iframe>
+          </div>
+        </div>
+        <div class="join-buttons">
+          <a href="fivem://connect/game.francegg.com">
+            <button class="btn-primary">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 256 256"
+                height="22"
+                width="22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M176,116H152a12,12,0,0,1,0-24h24a12,12,0,0,1,0,24ZM104,92h-4V88a12,12,0,0,0-24,0v4H72a12,12,0,0,0,0,24h4v4a12,12,0,0,0,24,0v-4h4a12,12,0,0,0,0-24ZM244.76,202.94a40,40,0,0,1-61,5.35,7,7,0,0,1-.53-.56L144.67,164H111.33L72.81,207.73c-.17.19-.35.38-.53.56A40,40,0,0,1,4.62,173.05a1.18,1.18,0,0,1,0-.2L21,88.79A63.88,63.88,0,0,1,83.88,36H172a64.08,64.08,0,0,1,62.93,52.48,1.8,1.8,0,0,1,0,.19l16.36,84.17a1.77,1.77,0,0,1,0,.2A39.74,39.74,0,0,1,244.76,202.94ZM172,140a40,40,0,0,0,0-80H83.89A39.9,39.9,0,0,0,44.62,93.06a1.55,1.55,0,0,0,0,.21l-16.34,84a16,16,0,0,0,13,18.44,16.07,16.07,0,0,0,13.86-4.21L96.9,144.07a12,12,0,0,1,9-4.07Zm55.76,37.31-7-35.95a63.84,63.84,0,0,1-44.27,22.46l24.41,27.72a16,16,0,0,0,26.85-14.23Z"
+                ></path>
+              </svg>
+              Conectar-se à France
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <a href="/"><img src="../media/images/logo.png" alt="Logo" /></a>
+        </div>
+        <div class="footer-text">
+          Copyright © 2025, France. All rights reserved
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://discord.com/invite/cDFKm5TrDD"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/cidadefrancerp/"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@cidadefrancegg"
+            target="_blank"
+            class="social-link"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="https://x.com/cidadefrance"
+            target="_blank"
+            class="social-link"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 20 20"
+              height="18"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.2048 2.25H21.5128L14.2858 10.51L22.7878 21.75H16.1308L10.9168 14.933L4.95084 21.75H1.64084L9.37084 12.915L1.21484 2.25H8.04084L12.7538 8.481L18.2048 2.25ZM17.0438 19.77H18.8768L7.04484 4.126H5.07784L17.0438 19.77Z"
+              ></path></svg
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script></script>
+</html>

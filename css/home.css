@@ -1,0 +1,75 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    overflow: hidden;
+    background-image: url('../media/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+
+    /* background-color: rgba(11, 29, 43, 0.329);  /* Caso prefira uma cor de fundo */
+  }
+  
+  .overlay {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente os elementos dentro da overlay */
+    align-items: center; /* Centraliza horizontalmente os elementos dentro da overlay */
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+  
+  .hero-logo {
+    max-width: 100%; /* Garante que a largura não ultrapasse o container */
+    max-height: 40vh; /* Restringe a altura da logo a 20% da altura da viewport */
+    object-fit: contain; /* Ajusta a imagem para manter a proporção */
+    margin-bottom: 1.5rem; /* Espaço entre a logo e os textos abaixo */
+    flex-shrink: 0; /* Impede que a logo encolha e cause problemas de layout */
+  }
+  
+  .hero-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btn {
+    margin-bottom: 2rem;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .a {
+    color: #87cefa;
+  }
+  .social-btn svg {
+    filter: brightness(1) saturate(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .social-btn svg:hover {
+    filter: brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(700%)
+      hue-rotate(180deg) brightness(103%) contrast(98%);
+  }
+  
+
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 1.5rem;
+    }
+  
+    .social-buttons {
+      gap: 0.5rem;
+    }
+  }

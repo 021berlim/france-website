@@ -1,0 +1,88 @@
+/* Cards Section Styles */
+:root {
+    --card-bg: rgba(0, 0, 0, 0.6); /* Fundo translúcido */
+    --card-border: var(--color-primary);
+    --card-hover-bg: rgba(135, 206, 250, 0.2); /* Fundo translúcido ao hover */
+    --card-radius: var(--border-radius);
+    --card-text: var(--color-text-secondary);
+    --card-title: var(--color-text);
+    --card-opacity: 0.95;
+  }
+  
+  .product-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-bg-secondary);
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+    opacity: var(--card-opacity);
+    backdrop-filter: blur(30px);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: var(--card-hover-bg);
+    opacity: 1;
+  }
+  
+  .card-image {
+    max-width: 100%;
+    border-radius: var(--card-radius);
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--card-title);
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    text-align: left;
+    color: var(--card-text);
+  }
+  
+  /* Button outside cards */
+  .loja-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border-radius: var(--card-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  .loja-btn:hover {
+    background-color: var(--color-primary-hover);
+  }
+  

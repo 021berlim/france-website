@@ -1,0 +1,81 @@
+/* Header Styles */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; /* Garante que a navbar cubra toda a largura */
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Suaviza a transição da cor de fundo e do tamanho */
+}
+
+nav {
+    width: 100%; /* Ocupa toda a largura da viewport */
+    padding: 1.5rem 2rem; /* Altura inicial da navbar */
+    display: flex;
+    align-items: center;
+    position: relative; /* Permite manipulação precisa do layout */
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease, padding 0.3s ease; /* Suaviza as transições */
+}
+
+nav.shrink {
+    padding: 0.8rem 2rem; /* Reduz a altura da navbar ao rolar */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    margin-right: auto; /* Empurra a logo para a extremidade esquerda */
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: absolute; /* Remove os links do fluxo normal */
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translateX(-50%); /* Centraliza os links com precisão */
+}
+
+.nav-links a {
+    color: var(--color-text);
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+
+@media (max-width: 768px) {
+    nav {
+      padding: 1rem;
+    }
+  
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .nav-links {
+      gap: 1rem;
+      position: relative;
+      left: auto;
+      transform: none;
+    }
+  }

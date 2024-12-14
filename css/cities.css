@@ -1,0 +1,56 @@
+/* Cities Section Styles */
+.cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.city-card {
+    position: relative;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.city-card img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.city-card:hover img {
+    transform: scale(1.1);
+}
+
+.city-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.city-info h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.city-info p {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .cities {
+      grid-template-columns: 1fr;
+    }
+  
+    .city-card img {
+      height: 12rem;
+    }
+  }
