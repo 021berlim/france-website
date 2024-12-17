@@ -161,26 +161,47 @@ function fetchNews() {
 function openPopup(news) {
   const popup = document.getElementById("popup");
   const popupTitle = document.getElementById("popup-title");
+  const popupDescription = document.getElementById("popup-description");
   const popupDetails = document.getElementById("popup-details");
-  const popupHeaderImage = document.getElementById("popup-header-image");
+  const popupCloseButton = document.getElementById("popup-close");
+  const citiesContainer = document.getElementById("cities-container");
 
   // Preenche as informações do pop-up
   popupTitle.textContent = news.title;
+  popupDescription.textContent = news.description;  // Usar o texto simples para a descrição
   popupDetails.innerHTML = news.description2;  // Usar innerHTML para renderizar as listas e títulos
-  popupHeaderImage.src = news.imgUrl; // A imagem será usada no header
 
   // Exibe o pop-up
   popup.style.display = "flex";
 
+  // Bloqueia a rolagem de fundo
+  document.body.classList.add("no-scroll");
+
+  // Aplica o blur na div de cidades
+  citiesContainer.classList.add("popup-blurred");
+
   // Fecha o pop-up quando o usuário clicar no "x"
-  const closeButton = document.getElementById("popup-close");
-  closeButton.removeEventListener("click", closePopup); // Remover listener anterior para evitar múltiplos eventos
-  closeButton.addEventListener("click", closePopup); // Adiciona novo listener de fechamento
+  popupCloseButton.removeEventListener("click", closePopup); // Remover listener anterior para evitar múltiplos eventos
+  popupCloseButton.addEventListener("click", closePopup); // Adiciona novo listener de fechamento
 
   // Função para fechar o pop-up
   function closePopup() {
     popup.style.display = "none";
+
+    // Reabilita a rolagem de fundo
+    document.body.classList.remove("no-scroll");
+
+    // Remove o blur da div de cidades
+    citiesContainer.classList.remove("popup-blurred");
   }
+
+  // Fecha o pop-up quando clicar fora da área de conteúdo
+  popup.addEventListener("click", (event) => {
+    // Verifica se o clique foi fora da área de conteúdo do pop-up
+    if (event.target === popup) {
+      closePopup();
+    }
+  });
 }
 
 // Chama a função para simular a atualização dos textos e criação das city-cards ao carregar a página

@@ -14,7 +14,7 @@
 
 .popup-content {
   position: relative;
-  background-color: var(--color-bg-secondary);
+  background-color: rgba(13, 17, 23, 0.95); /* Dark background color with slight transparency */
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius);
   padding: 2rem;
@@ -23,25 +23,38 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  max-height: 80%; /* Limitar a altura do conteúdo */
-  text-align: left; /* Alinha todos os textos dentro do conteúdo à esquerda */
+  max-height: 80%;
+  text-align: left;
+  background-image: url("../media/images/patchnotes.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  backdrop-filter: blur(0px); /* Começa sem desfoque */
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
 }
 
+.popup-blurred {
+  filter: blur(5px);
+  pointer-events: none;  /* Impede interação com elementos enquanto o pop-up está ativo */
+}
 .popup-header {
   position: relative;
-  width: 100%;
-  height: 200px;
-  background-color: #000;
-  overflow: hidden;
+  width: 100%; /* Largura total do pop-up */
+  height: 200px; /* Altura fixa do cabeçalho */
+  background-size: cover; /* Faz a imagem cobrir todo o cabeçalho */
+  background-position: center; /* Centraliza a imagem no cabeçalho */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
 }
 
-.popup-header img {
-  width: 100%; /* A imagem ocupa 100% da largura do cabeçalho */
-  height: 100%; /* A imagem ocupa 100% da altura do cabeçalho */
-  object-fit: cover; /* A imagem será recortada para cobrir toda a área do cabeçalho */
+.popup-header h2 {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  z-index: 1; /* Garante que o texto fique sobre a imagem */
 }
 
 .popup-header h2 {

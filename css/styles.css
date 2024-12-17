@@ -10,6 +10,11 @@
   --border-radius: 0.5rem;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+
 /* Personalização da barra de rolagem */
 ::-webkit-scrollbar {
     width: 12px; /* Largura da barra de rolagem */

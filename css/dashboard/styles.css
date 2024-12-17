@@ -11,28 +11,28 @@
   --card-height: 60vh; /* Definindo altura fixa para os cards em vh */
 }
 
-/* Scrollbar Styles */
+/* Personalização da barra de rolagem */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 12px; /* Largura da barra de rolagem */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #1b2430; /* Cinza-azulado mais intenso */
-  border-radius: 10px;
+  background-color: #17202a; /* Cor do fundo da trilha (cinza com azul claro) */
+  border-radius: 10px; /* Bordas arredondadas para a trilha */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: 10px;
-  border: 3px solid #1b2430; /* Igual ao track */
+  background-color: #87cefa; /* Cor do "polegar" (parte que o usuário arrasta) */
+  border-radius: 10px; /* Bordas arredondadas para o polegar */
+  border: 3px solid #17202a; /* Borda que separa o polegar da trilha */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary-hover);
+  background-color: #679dbe; /* Cor quando o usuário passa o mouse sobre o polegar */
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #1b2430;
+  background-color: #17202a; /* Cor do canto da barra de rolagem */
 }
 
 * {
@@ -127,7 +127,6 @@ a {
 .buy-btn:hover {
   background-color: var(--color-primary-hover);
 }
-
 
 .vip-box {
   background-color: rgba(13, 17, 23, 0.3); /* Transparência ajustada */
