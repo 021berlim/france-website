@@ -1,5 +1,5 @@
-/* Pop-up Styles */
-.popup {
+ /* Pop-up Styles */
+ .popup {
   display: none; /* Inicialmente escondido */
   position: fixed;
   top: 0;
@@ -132,7 +132,7 @@
 
 .city-info h3 {
   color: var(--color-primary);
-  font-size: 1.5rem;
+  font-size: 1.20rem; /* Tamanho reduzido */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -160,4 +160,42 @@ ul ul {
   .city-card img {
     height: 12rem;
   }
+}
+
+/* Setas de navegação */
+#cities-container-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+#prev-arrow {
+  left: 10px;
+}
+
+#next-arrow {
+  right: 10px;
+}
+
+.city-card {
+  display: none; /* Inicialmente oculto */
+  opacity: 0; /* Começa com opacidade 0 */
+  transform: translateY(20px); /* Move levemente para baixo */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza a transição de opacidade e movimento */
+}
+
+.city-card.show {
+  display: block; /* Exibe os cards quando a classe show for aplicada */
+  opacity: 1; /* Torna o card visível */
+  transform: translateY(0); /* Reseta o deslocamento, trazendo o card para sua posição normal */
 }
