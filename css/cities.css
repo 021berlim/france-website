@@ -1,56 +1,163 @@
+/* Pop-up Styles */
+.popup {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: relative;
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  max-height: 80%; /* Limitar a altura do conteúdo */
+  text-align: left; /* Alinha todos os textos dentro do conteúdo à esquerda */
+}
+
+.popup-header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.popup-header img {
+  width: 100%; /* A imagem ocupa 100% da largura do cabeçalho */
+  height: 100%; /* A imagem ocupa 100% da altura do cabeçalho */
+  object-fit: cover; /* A imagem será recortada para cobrir toda a área do cabeçalho */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup-header h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.popup-close:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Alinha a descrição à esquerda */
+.popup-description {
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-bottom: 1rem;
+}
+
+#popup-details-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 20px 20px 20px;
+}
+
+#popup-details {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
 /* Cities Section Styles */
 .cities {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
 }
 
 .city-card {
-    position: relative;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius);
-    overflow: hidden;
+  position: relative;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.city-card:hover {
+  transform: scale(1.05);
 }
 
 .city-card img {
-    width: 100%;
-    height: 16rem;
-    object-fit: cover;
-    transition: transform 0.3s;
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
 .city-card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .city-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 }
 
 .city-info h3 {
-    color: var(--color-primary);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .city-info p {
-    color: var(--color-text-secondary);
-    font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
 }
 
+/* Estilo para a lista e sub-lista com efeito de escadinha */
+ul {
+  padding-left: 20px; /* Ajusta o recuo das listas */
+}
+
+ul ul {
+  margin-left: 20px; /* Adiciona um recuo adicional nas sub-listas */
+}
+
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
-    .cities {
-      grid-template-columns: 1fr;
-    }
-  
-    .city-card img {
-      height: 12rem;
-    }
+  .cities {
+    grid-template-columns: 1fr;
   }
+
+  .city-card img {
+    height: 12rem;
+  }
+}

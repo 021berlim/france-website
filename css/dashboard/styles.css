@@ -1,0 +1,303 @@
+:root {
+  --color-primary: #87cefa;
+  --color-primary-hover: #679dbe;
+  --color-bg: #000000;
+  --color-bg-secondary: #0a0f14;
+  --color-card-bg: #17202a;
+  --color-text: #ffffff;
+  --color-text-secondary: #9ca3af;
+  --max-width: 1280px;
+  --border-radius: 0.5rem;
+  --card-height: 60vh; /* Definindo altura fixa para os cards em vh */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1b2430; /* Cinza-azulado mais intenso */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  border: 3px solid #1b2430; /* Igual ao track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #1b2430;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/media/images/background.png");
+  color: var(--color-text);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-panel {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.panel-container {
+  display: flex;
+  gap: 2rem;
+  max-width: var(--max-width);
+  width: 100%;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em várias linhas, se necessário */
+  justify-content: center;
+}
+
+/* User Card Styles */
+.user-card {
+  background-color: rgba(13, 17, 23, 0.85); /* Transparência no fundo */
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 300px;
+  text-align: center;
+  height: var(--card-height); /* Define altura fixa para o card */
+  overflow: hidden; /* Impede que o conteúdo ultrapasse a altura definida */
+}
+
+.user-avatar img {
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.username {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.account-id {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  background-color: #17202a6c;
+  color: var(--color-text); /* Alterando para a cor do texto geral */
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.connect-btn,
+.buy-btn {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.connect-btn:hover,
+.buy-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+
+.vip-box {
+  background-color: rgba(13, 17, 23, 0.3); /* Transparência ajustada */
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+/* Data Card Styles */
+.data-card {
+  background-color: rgba(13, 17, 23, 0.85);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  flex-grow: 1;
+  height: var(--card-height); /* Define altura fixa para o card */
+  overflow: hidden; /* Impede que o conteúdo ultrapasse a altura definida */
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.tab-content {
+  display: none;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-group label {
+  display: inline-block;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  background-color: rgba(13, 17, 23, 0.3);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  flex: 2;
+}
+
+/* Removendo borda branca no foco */
+input:focus {
+  outline: none; /* Remove a borda de foco padrão */
+  box-shadow: none; /* Remove sombras de foco */
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  color: var(--color-primary);
+}
+
+.no-data {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .user-panel {
+    margin-top: 100px; /* Ajuste pequeno para telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .user-panel {
+    margin-top: 110px; /* Ajuste pequeno para tablets */
+  }
+
+  .user-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-panel {
+    padding: 1rem;
+    margin-top: 120px; /* Ajuste pequeno para smartphones */
+  }
+
+  .data-card {
+    padding: 1rem;
+  }
+
+  .user-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    flex: none;
+    width: 100%;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+}
