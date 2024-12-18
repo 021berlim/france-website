@@ -13,32 +13,29 @@
 body.no-scroll {
   overflow: hidden;
 }
-
-
 /* Personalização da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #17202a; /* Cor do fundo da trilha (cinza com azul claro) */
-    border-radius: 10px; /* Bordas arredondadas para a trilha */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #87cefa; /* Cor do "polegar" (parte que o usuário arrasta) */
-    border-radius: 10px; /* Bordas arredondadas para o polegar */
-    border: 3px solid #17202a; /* Borda que separa o polegar da trilha */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #679dbe; /* Cor quando o usuário passa o mouse sobre o polegar */
-  }
-  
-  ::-webkit-scrollbar-corner {
-    background-color: #17202a; /* Cor do canto da barra de rolagem */
-  }
-  
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #17202a; /* Cor do fundo da trilha (cinza com azul claro) */
+  border-radius: 10px; /* Bordas arredondadas para a trilha */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #87cefa; /* Cor do "polegar" (parte que o usuário arrasta) */
+  border-radius: 10px; /* Bordas arredondadas para o polegar */
+  border: 3px solid #17202a; /* Borda que separa o polegar da trilha */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #679dbe; /* Cor quando o usuário passa o mouse sobre o polegar */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #17202a; /* Cor do canto da barra de rolagem */
+}
 
 body {
   background-color: var(--color-bg-secondary);
